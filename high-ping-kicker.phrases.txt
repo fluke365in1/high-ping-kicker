@@ -1,0 +1,48 @@
+﻿/* 
+	Following named colors are supported: {white} \x01, {cyan} \x03, {orange} \x04, {green} \x05
+*/
+
+"Phrases"
+{
+	"Ping"
+	{
+		"en"		"Ping"
+		"ru"		"Пинг"
+	}
+	
+	"IMMUNE"
+	{
+		"en"		"IMMUNE"
+		"ru"		"Иммунитет"
+	}
+	
+	"CONNECTING"
+	{
+		"en"		"CONNECTING"
+		"ru"		"Подключается"
+	}
+	
+	"Warnings"
+	{
+		"en"		"Warnings"
+		"ru"		"Предупреждений"
+	}
+	
+	"Is_Kicked_All"
+	{
+		"en"		"{green}%N {orange}kicked: {white}ping is too high"
+		"ru"		"{green}%N {orange}кикнут: {white}слишком высокий пинг"
+	}
+	
+	"Warn_Msg"
+	{
+		"en"		"You will be kicked for excessive ping. You have %i out of %i warnings."
+		"ru"		"Вас может кикнуть из-за высокого пинга. Предупреждение %i из %i."
+	}
+	
+	"Is_Kicked_Client"
+	{
+		"en"		"Your ping is too high"
+		"ru"		"Ваш пинг слишком высок"
+	}
+}
