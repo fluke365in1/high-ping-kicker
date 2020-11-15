@@ -17,8 +17,8 @@
 </p>
 
 <!-- ABOUT -->
-## high-ping-kicker
-high-ping-kicker was created by [@msleeper](https://forums.alliedmods.net/member.php?u=37521) and later picked up by [@Dragokas](https://forums.alliedmods.net/member.php?u=282667) to improve performance and push out hotfixes. Here it's been forked by [@teamorbitone](https://github.com/teamorbitone) to modify it to remove features that might not be as much needed.
+## High Ping Kicker
+High Ping Kicker was created by [@msleeper](https://forums.alliedmods.net/member.php?u=37521) and later picked up by [@Dragokas](https://forums.alliedmods.net/member.php?u=282667) to improve performance and push out hotfixes. Here it's been forked by [@teamorbitone](https://github.com/teamorbitone) to modify it to remove features that might not be as much needed.
 
 <!-- CVARS -->
 ## Cvars
