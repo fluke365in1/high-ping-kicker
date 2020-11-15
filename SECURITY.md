@@ -1,7 +1,7 @@
 ## Security Policy
 
 #### Supported Versions
-The following versions of Instadefuse are receiving active support and maintenance. Any security vulnerabilities discovered must be reproducible in the supported versions.
+The following versions of high-ping-kicker are receiving active support and maintenance. Any security vulnerabilities discovered must be reproducible in the supported versions.
 
 | Version | Supported          |
 | ------- | ------------------ |
