@@ -1,108 +1,9 @@
-/*
------------------------------------------------------------------------------
-VERY BASIC HIGH PING KICKER - SOURCEMOD PLUGIN
------------------------------------------------------------------------------
-Code Written By msleeper (c) 2010
-Visit http://www.msleeper.com/ for more info!
------------------------------------------------------------------------------
-This is a very simple high ping kicker that kicks players based on their ping
-as reported by SourceMod. The ping is checked at a constant interval (default
-of 20 seconds) and if their ping exceeds the max ping given, they are
-internally given a warning. If a player exceeds the maximum number of
-warnings, they are kicked from the server. That's it!
-
-The plugin does take admin level into account, based on an immunity flag cvar.
-Players with the RESERVED (default) or ROOT flags are immune to ping
-balancing. You can also specify a grace period after a player connects before
-they will be warned to compensate for first connect ping, as well as a
-minimum number of players in the server before it starts kicking them. The
-plugin will also apply this grace period after a map change before doing any
-ping checking, again to allow all players to fully join and pings to
-normalize.
-
-Thank you and enjoy!
-- msleeper
------------------------------------------------------------------------------
-Version History
-
--- 1.0 (2/26/09)
- . Initial release!
-
--- 1.1 (2/27/09)
- . Added current ping as reported by the plugin to the debug command.
- . Changed the way ping is gathered to lower the margin of error in ping
-   checking.
-
--- 1.2 (5/19/09)
- . Added check to ignore fake clients/bots, which was throwing an error for
-   HLTV users and L4D bots.
- . Changed the initial mapchange delay from 60 seconds to 90 seconds.
- . Added 2 cvars to handle public chat display message in addition to normal
-   kick message sent to player. Left 4 Dead does not display disconnect
-   messages in-game to the rest of the players, so it is advised to use this
-   function if you want in-game kick announcements in L4D. The cvar can
-   accept a chat variable, {NAME} case-sensitive, which will replace with the
-   player in question's name. They are not required.
- . Added 2 cvars to handle player warning message when they are given
-   warnings by the plugin. The cvar can accept 2 chat variables, {WARN} and
-   {MAXWARN} case-sensitive, which will replace with their current warnings
-   and the maximum warnings respectively. Neither are required.
- . Added player's playtime to debug output.
- . Reformatted debug command output.
- 
--- 1.3 (10/1/09)
- . Fixed long standing bug with the wrong type of player flag being used. The
-   plugin now properly uses the CUSTOM1 flag instead of the RESERVED flag.
-   Again, sorry to everyone for not addressing this sooner!
- . Commented code further and cleaned up some unnecessary things.
-
--- 1.4 (7/15/10)
- . Increased default value and other changes to several cvars.
- . Changed plugin startup/mapchange delay from a static 90 seconds to the
-   same value as individual player delay to improve plugin consistency.
- . Changed the way player playtime was handled, as the previous way was not
-   using the correct value. New connecting players are now properly given a
-   connection grace period.
- . Debug command changes have been made as well. Removed player playtime from
-   debug message as it was also not using the correct value. Added a message
-   to show connecting players as well as immune players.
- . Removed static CUSTOM1 immunity flag, and added cvar to control what flag
-   grants immunity. Players with the ROOT flag are still always immune. The
-   default immunity flag also changed back to RESERVED due to request.
- . Changed the way "minimum players" was calculated. Previously the plugin
-   would not start working until the playercount was greater than the
-   minimum. The plugin now properly starts if the playercount is equal to
-   the minimum.
- . Changed the log output. Logging now only logs when players receive
-   warnings and when they are kicked. There is no longer any immunity
-   logging.
- . Fixed the plugin not properly updating the ping check rate when the rate
-   is changed on the fly.
- . Generally just cleaned up code to benefit from some minor new features of
-   SourceMod, and added further commenting and code consistency.
-   
- 1.4.2 (30-Jan-2020) (Dragokas)
- - Optimizations and simplifications, methodmaps.
- - ping check is now can be disabled at specified hours, adjusted by new ConVars:
-	* sm_vbping_ignore_hour_start
-	* sm_vbping_ignore_hour_end
- - sm_vbping_debug command renamed to "sm_ping"
- - !ping updated to display only own info for users, and all users info for admins.
- 
- 1.4.3 (02-May-2020) (Dragokas)
- - ConVars precached, notify flag.
- - some more safe checks.
- - added translation support.
- - Added Russian translation.
------------------------------------------------------------------------------
-*/
-
 #include <sourcemod>
 
 #pragma newdecls required
 #pragma semicolon 1
 
-#define PLUGIN_VERSION "1.4.3"
+#define PLUGIN_VERSION "1.0.0"
 
 #define CVAR_FLAGS FCVAR_NOTIFY
 
@@ -145,11 +46,11 @@ int g_iCvarIgnoreHourMax;
 
 public Plugin myinfo = 
 {
-	name = "Very Basic High Ping Kicker",
-	author = "msleeper (Fork by Dragokas)",
-	description = "Simple ping check and autokick",
+	name = "High Ping Kicker",
+	author = "Orbit One",
+	description = "Automatically kick users going beyond your wished-for max ping limit, giving your players a better experience.",
 	version = PLUGIN_VERSION,
-	url = "http://www.msleeper.com/"
+	url = "https://orbitone.org/"
 };
 
 // Here we go!
@@ -158,7 +59,7 @@ public void OnPluginStart()
 	LoadTranslations("vbping.phrases");
 
 	// Plugin version public Cvar
-	CreateConVar("sm_vbping_version", PLUGIN_VERSION, "Very Basic High Ping Kicker Version", CVAR_FLAGS|FCVAR_DONTRECORD);
+	CreateConVar("sm_vbping_version", PLUGIN_VERSION, "High Ping Kicker version", CVAR_FLAGS|FCVAR_DONTRECORD);
 
 	// Debug command to see who is going to get kicked
 	RegConsoleCmd("sm_ping", cmd_Debug, "Displays player ping debug information");
