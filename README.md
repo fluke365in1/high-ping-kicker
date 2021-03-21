@@ -21,4 +21,4 @@ High Ping Kicker was created by [@msleeper](https://forums.alliedmods.net/member
 
 <!-- LICENSE -->
 ## License
-xenforq/high-ping-kicker is licensed under the ``GPL-3.0`` license. Read more about it's meaning and effects [here](https://github.com/xenforq/high-ping-kicker/blob/main/LICENSE).
+whallin/high-ping-kicker is licensed under the ``GPL-3.0`` license. Read more about it's meaning and effects [here](https://github.com/whallin/high-ping-kicker/blob/main/LICENSE).
