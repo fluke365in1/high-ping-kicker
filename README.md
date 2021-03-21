@@ -1,19 +1,15 @@
 <!-- HEADER -->
-<p align=center>
-  <a href="https://orbitone.org">
-    <img src="https://raw.githubusercontent.com/teamorbitone/branding/main/Wordmarks/Color.png" alt="The wordmark of Orbit One.">
-  </a>
-</p>
+<a href="https://williamhallin.com"><img src="https://raw.githubusercontent.com/whallin/whallin/master/img_header.png" alt="A banner showing the William Hallin logo."></a>
 
 <!-- SHIELDS -->
 <p align=center>
-  <a href="https://github.com/xenforq/high-ping-kicker/releases/">
-    <img src="https://img.shields.io/github/downloads/xenforq/high-ping-kicker/latest/total.svg?style=for-the-badge&color=brightgreen" alt="Shield showing total downloads.">
+  <a href="https://github.com/whallin/high-ping-kicker/releases/">
+    <img src="https://img.shields.io/github/downloads/whallin/high-ping-kicker/latest/total.svg?style=for-the-badge&color=brightgreen" alt="Shield showing total downloads.">
   </a>
-  <a href="https://github.com/xenforq/high-ping-kicker/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/xenforq/high-ping-kicker.svg?style=for-the-badge&color=brightgreen" alt="Shield showing total amount of contributors.">
+  <a href="https://github.com/whallin/high-ping-kicker/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/whallin/high-ping-kicker.svg?style=for-the-badge&color=brightgreen" alt="Shield showing total amount of contributors.">
   </a>
-  <img src="https://badges.pufler.dev/visits/xenforq/high-ping-kicker?style=for-the-badge">
+  <img src="https://badges.pufler.dev/visits/whallin/high-ping-kicker?style=for-the-badge">
 </p>
 
 <!-- ABOUT -->
