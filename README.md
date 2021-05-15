@@ -3,9 +3,6 @@
 
 <!-- SHIELDS -->
 <p align=center>
-  <a href="https://github.com/whallin/high-ping-kicker/releases/">
-    <img src="https://img.shields.io/github/downloads/whallin/high-ping-kicker/latest/total.svg?style=for-the-badge&color=brightgreen" alt="Shield showing total downloads.">
-  </a>
   <a href="https://github.com/whallin/high-ping-kicker/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/whallin/high-ping-kicker.svg?style=for-the-badge&color=brightgreen" alt="Shield showing total amount of contributors.">
   </a>
@@ -13,12 +10,20 @@
 </p>
 
 <!-- ABOUT -->
-## High Ping Kicker
-High Ping Kicker was created by [@msleeper](https://forums.alliedmods.net/member.php?u=37521) and later picked up by [@Dragokas](https://forums.alliedmods.net/member.php?u=282667) to improve performance and push out hotfixes. Here it's been forked by [@teamorbitone](https://github.com/teamorbitone) to modify it to remove features that might not be as much needed.
+## 🎮 high-ping-kicker
+high-ping-kicker was created and developed by [@msleeper](https://forums.alliedmods.net/member.php?u=37521), but has now turned into a more inactive resource that sadly isn't being maintained. Hence, why this repository exists. We're here to make sure development of this incredibly useful plugin remains active and fixes are made to existing issues. 
 
-<!-- CVARS -->
-## Cvars
+high-ping-kicker lets kick users from your server that exceed the specified amount of delay to your server (ping). This can easily help eliminate players who are lagging far too much to provide a fair chance for others on your network.
+
+<!-- COMPILE -->
+## ▶️ Compile yourself
+Make compiling easy with [Spider (https://spider.limetech.io/)](https://spider.limetech.io/) or follow [this guide](https://wiki.alliedmods.net/Compiling_SourceMod_Plugins) written on the AlliedModders wiki.
+
+<!-- CONTRIBUTORS -->
+## 🤝 Contributors
+<a href="https://github.com/whallin/high-ping-kicker/graphs/contributors"><img src="https://contrib.rocks/image?repo=whallin/high-ping-kicker" /></a>
 
 <!-- LICENSE -->
-## License
-whallin/high-ping-kicker is licensed under the ``GPL-3.0`` license. Read more about it's meaning and effects [here](https://github.com/whallin/high-ping-kicker/blob/main/LICENSE).
+## ⚖️ License
+Copyright © 2021 [William Hallin Multimedia <me@williamhallin.com> (https://williamhallin.com)](https://williamhallin.com)
+whallin/menu-rules is licensed under the ``GPL-3.0`` license. Read more about its meaning and effects [here](https://github.com/whallin/high-ping-kicker/blob/main/LICENSE).
