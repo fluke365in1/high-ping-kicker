@@ -10,7 +10,7 @@
 </p>
 
 <!-- ABOUT -->
-## 🎮 high-ping-kicker
+# 🎮 high-ping-kicker
 high-ping-kicker was created and developed by [@msleeper](https://forums.alliedmods.net/member.php?u=37521), but has now turned into a more inactive resource that sadly isn't being maintained. Hence, why this repository exists. We're here to make sure development of this incredibly useful plugin remains active and fixes are made to existing issues. 
 
 high-ping-kicker lets kick users from your server that exceed the specified amount of delay to your server (ping). This can easily help eliminate players who are lagging far too much to provide a fair chance for others on your network.
